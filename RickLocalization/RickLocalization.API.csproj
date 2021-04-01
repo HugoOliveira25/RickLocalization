@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UI\**" />
+    <Content Remove="UI\**" />
+    <EmbeddedResource Remove="UI\**" />
+    <None Remove="UI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RickLocalization.Domain\RickLocalization.Domain.csproj" />
+    <ProjectReference Include="..\RickLocalization.Handler\RickLocalization.Handler.csproj" />
+    <ProjectReference Include="..\RickLocalization.Repository\RickLocalization.Repository.csproj" />
+  </ItemGroup>
+
+
+</Project>

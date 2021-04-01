@@ -1,0 +1,14 @@
+
+<div fxLayout="row wrap" fxLayoutAlign="start" style="padding: 2%;">
+    <ng-container *ngFor="let card of obs | async" style="margin: 0.5%">   
+            <mat-card class="card-grid" (click)="navigateToDetail(card.id)"  fxFlex="0 1 calc(50% - 11px)" fxFlex.lt.lg="0 1 calc(50% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+                <mat-card-header>
+                    <div mat-card-avatar><img class="img-avatar" src="{{ card.rickImage }}" alt="{{ card.rickImage }}" ></div>
+                    <div mat-card-avatar><img class="img-avatar" src="{{ card.mortyImage }}" alt="{{ card.mortyImage }}"></div>
+                    <mat-card-title style="margin-left: 10px;">{{card.rick}} & {{card.morty}}</mat-card-title>
+                    <mat-card-subtitle style="margin-left: 10px;">{{ card.dimension }}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+    </ng-container>    
+</div>
+<mat-paginator [pageSizeOptions]="[2, 5, 10]"></mat-paginator>

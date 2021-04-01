@@ -1,0 +1,15 @@
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.toolbar {
+  font-size: 1.5rem;
+}
+
+a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}

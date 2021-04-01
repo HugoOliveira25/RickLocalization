@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Add Travel</h1>
+<form class="example-form" [formGroup]="formGroup">
+    <mat-form-field class="example-full-width">
+      <mat-label>Location</mat-label>
+      <input type="text"
+             placeholder="location"
+             aria-label="Location"
+             matInput
+             formControlName="Location"
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button mat-button cdkFocusInitial (click)="addTravel()" [ngClass]="{'button-disabled' : formGroup.invalid}">Travel</button>
+      <button mat-button (click)="onNoClick()">Cancel</button>
+    </div>
+  </form>

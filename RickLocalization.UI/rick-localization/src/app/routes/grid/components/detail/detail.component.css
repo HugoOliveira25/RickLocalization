@@ -1,0 +1,20 @@
+.container {
+  margin: 1%;
+  padding: 1%;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.card {
+  margin: 1rem;
+  max-width: 400px;
+}
+
+.button {
+  margin: 1rem;
+  width: 150px;
+  height: 50px;
+}

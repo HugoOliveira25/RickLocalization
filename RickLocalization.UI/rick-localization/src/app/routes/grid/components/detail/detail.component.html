@@ -1,0 +1,38 @@
+<div class="container">
+    <h1 class="title">Dimension: {{ viewModel?.dimension }}</h1>
+    <div fxLayout="row wrap" fxLayoutAlign="start">
+        <mat-card class="card" fxFlex="0 1 calc(50% - 11px)" fxFlex.lt.lg="0 1 calc(50% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+            <mat-card-header>
+              <mat-card-title>{{ viewModel.rick }}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{ viewModel.rickImage }}" alt="{{ viewModel.rickImage }}">
+            <mat-card-content>
+                <p><strong>Status: </strong>{{viewModel.status}}.</p>
+                <p><strong>Specie: </strong>{{viewModel.species}}.</p>
+                <p *ngIf="viewModel.type != ''"><strong>Type: </strong>{{viewModel.type}}.</p>
+                <p><strong>Gender: </strong>{{viewModel.gender}}.</p>
+            </mat-card-content>
+          </mat-card>
+          <mat-card class="card" fxFlex="0 1 calc(50% - 11px)" fxFlex.lt.lg="0 1 calc(50% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+            <mat-card-header>
+              <mat-card-title>{{viewModel.morty}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{ viewModel.mortyImage }}" alt="{{ viewModel.mortyImage }}">
+            <mat-card-content>
+                <p><strong>Status: </strong>{{viewModel.status}}.</p>
+                <p><strong>Specie: </strong>{{viewModel.species}}.</p>
+                <p *ngIf="viewModel.type != ''"><strong>Type: </strong>{{viewModel.type}}.</p>
+                <p><strong>Gender: </strong>{{viewModel.gender}}.</p>
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start">
+        <button mat-raised-button color="primary" class="button" (click)="openDialog()">
+            Add Travel
+          </button>
+        <button mat-raised-button color="primary" class="button" (click)="navigateToHostoric()">
+            Historic
+        </button>
+    </div>
+</div>
+

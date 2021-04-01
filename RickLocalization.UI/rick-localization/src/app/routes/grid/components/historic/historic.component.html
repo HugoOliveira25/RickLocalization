@@ -1,0 +1,9 @@
+<div class="container-historic">
+    <h1>Travels</h1>
+    <ul>
+        <li *ngFor="let hist of historic">{{ hist.Location }}</li>
+    </ul>
+    <p *ngIf="historic.length === 0">no travel taken.</p>
+</div>
+
+

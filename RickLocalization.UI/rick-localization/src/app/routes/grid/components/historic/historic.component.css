@@ -1,0 +1,24 @@
+.container-historic {
+  margin: 2%;
+  width: 70%;
+  height: 70%;
+  background: url("../../../../../assets/portal_rick_and_morty.png") no-repeat center center fixed;
+  background-size: 30%;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+ul {
+
+  list-style-type: none;
+}
+
+li {
+  margin: 2px;
+  padding: 15px;
+  border: 1px solid;
+  width: 30%;
+}
